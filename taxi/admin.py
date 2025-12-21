@@ -6,10 +6,10 @@ from .models import Driver, Car, Manufacturer
 @admin.register(Driver)
 class DriverAdmin(UserAdmin):
     fieldsets: tuple = UserAdmin.fieldsets + (
-        ("Доп. информация", {"fields": ("license_number",)}),
+        ("Additional info", {"fields": ("license_number",)}),
     )
     add_fieldsets: tuple = UserAdmin.add_fieldsets + (
-        ("Доп. информация", {"fields": ("license_number",)}),
+        ("Additional info", {"fields": ("license_number",)}),
     )
     list_display = (
         "username",
